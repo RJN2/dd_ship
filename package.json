@@ -1,0 +1,19 @@
+{
+  "name": "dd_ship",
+  "version": "1.0.0",
+  "description": "\"data delivery blog\"",
+  "main": "_site/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RJN2/dd_ship.git"
+  },
+  "author": "RJN2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RJN2/dd_ship/issues"
+  },
+  "homepage": "https://github.com/RJN2/dd_ship"
+}
