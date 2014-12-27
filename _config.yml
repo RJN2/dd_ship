@@ -13,11 +13,14 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
-include:
-	- .nojekyll
+include: [
+	.nojekyll
+]
 
-exclude:
-	- "node_modules"
-	- "package.json"
-	- "bower_components"
-	- "bower.json"
+exclude: [
+	"Gruntfile.coffee",
+	"node_modules",
+	"package.json",
+	"bower_components",
+	"bower.json"
+]
