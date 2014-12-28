@@ -1,6 +1,31 @@
 /**
  * Reset some basic elements
  */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #060606;
+  overflow: hidden;
+  color: #666666;
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal; }
+
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default; }
+
+html, body {
+  font-size: 100%; }
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -439,3 +464,66 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+/* nav push right */
+/* General styles for all menus */
+#app {
+  width: 99%;
+  height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 287ms cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: transform 287ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+  #app nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 800;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+    #app nav #nav_wrap {
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      right: 100px;
+      top: 0;
+      background-color: #060606;
+      opacity: 0;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      -webkit-transition: opacity 487ms ease-out 123ms;
+              transition: opacity 487ms ease-out 123ms; }
+    #app nav #bar {
+      position: relative;
+      width: 100px;
+      height: 100%;
+      padding-top: 2.125em;
+      background-color: #212121;
+      z-index: 9999;
+      cursor: pointer; }
+      #app nav #bar #dds_logo {
+        position: absolute;
+        top: 40%; }
+        #app nav #bar #dds_logo:hover #ship-water {
+          fill: red; }
+  #app._nav_open {
+    -webkit-transform: translateX(300px);
+        -ms-transform: translateX(300px);
+            transform: translateX(300px); }
+    #app._nav_open nav #nav_wrap {
+      opacity: 1; }
+
+/* Push classes applied to the body */
+.blog {
+  overflow-x: hidden;
+  position: relative;
+  left: 0; }
+
+/* Transitions */
+#nav_wrap,
+.blog {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }

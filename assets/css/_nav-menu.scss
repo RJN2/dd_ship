@@ -1,0 +1,80 @@
+/* nav push right */
+
+/* General styles for all menus */
+
+#app {
+	width: 99%;
+	height: 100%;
+	transform: translate3d(0, 0, 0);
+	transition: transform 287ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	nav {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100px;
+		height: 100%;
+		z-index: 800;
+		transform: translate3d(0, 0, 0);
+		#nav_wrap {
+			position: absolute;
+			width: 300px;
+			height: 100%;
+			right: 100px;
+			top: 0;
+			background-color: #060606;
+			opacity: 0;
+			-webkit-backface-visibility: hidden;
+			transform: translate3d(0, 0, 0);
+			transition: opacity 487ms ease-out 123ms;
+		}
+		#bar {
+			position: relative;
+			width: 100px;
+			height: 100%;
+			padding-top: 2.125em;
+			background-color: #212121;
+			z-index: 9999;
+			cursor: pointer;
+	    #dds_logo {
+	      position:absolute;
+	      top:40%;
+	      &:hover {
+	        #ship-water {
+	          fill:red;
+	        }
+	      }
+	    }
+	  }
+	}
+	&._nav_open {
+		transform: translateX(300px);
+		nav {
+			#nav_wrap {
+				opacity:1;
+			}
+		}
+	}
+}
+ 
+
+/* Push classes applied to the body */
+ 
+.blog {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+}
+
+ 
+/* Transitions */
+ 
+#nav_wrap,
+.blog {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+
+

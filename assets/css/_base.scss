@@ -1,14 +1,41 @@
 /**
  * Reset some basic elements
  */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #060606;
+    overflow: hidden;
+    color: #666666;
+    font-family: "Noto Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+body {
+    background: white;
+    color: #222222;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    position: relative;
+    cursor: default;
+}
+
+html, body {
+    font-size: 100%;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
-
-
 
 /**
  * Basic styling
@@ -22,7 +49,6 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
-
 
 
 /**

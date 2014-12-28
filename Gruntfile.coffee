@@ -48,6 +48,13 @@ module.exports = (grunt) ->
           src: "jquery.min.js"
           dest: "vendor/js/"
         }]
+      classie:
+        files: [{
+          expand: true
+          cwd: "bower_components/classie/"
+          src: "classie.js"
+          dest: "vendor/js/"
+        }]
       bootstrap:
         files: [{
           expand: true
