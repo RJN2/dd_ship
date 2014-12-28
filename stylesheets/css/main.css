@@ -1,16 +1,6 @@
 /**
  * Reset some basic elements
  */
-html, body {
-  width: 100%;
-  height: 100%;
-  background-color: #060606;
-  overflow: hidden;
-  color: #666666;
-  font-family: "Noto Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-weight: normal; }
-
 body {
   background: white;
   color: #222222;
@@ -24,6 +14,14 @@ body {
   cursor: default; }
 
 html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #060606;
+  overflow: hidden;
+  color: #666666;
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
   font-size: 100%; }
 
 body, h1, h2, h3, h4, h5, h6,
@@ -35,15 +33,6 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #111;
-  background-color: #fdfdfd;
-  -webkit-text-size-adjust: 100%; }
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -89,13 +78,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: darkgray;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: darkgray; }
   a:hover {
-    color: #111;
-    text-decoration: underline; }
+    color: white;
+    text-decoration: none; }
 
 /**
  * Blockquotes
@@ -164,6 +153,13 @@ pre {
   vertical-align: middle; }
   .icon > svg path {
     fill: #828282; }
+
+/**
+ * Other
+ */
+small {
+  font-size: 60%;
+  line-height: inherit; }
 
 /**
  * Site header
@@ -496,34 +492,145 @@ pre {
               transform: translate3d(0, 0, 0);
       -webkit-transition: opacity 487ms ease-out 123ms;
               transition: opacity 487ms ease-out 123ms; }
+      #app nav #nav_wrap ul {
+        position: absolute;
+        height: 100px;
+        left: 0;
+        top: 50%;
+        margin: -50px 0 0 2.0625em;
+        list-style: none;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0); }
+        #app nav #nav_wrap ul li {
+          line-height: 1.4; }
+          #app nav #nav_wrap ul li a {
+            font-family: "futura-pt", sans-serif;
+            font-weight: 300;
+            font-size: 1.25em;
+            text-transform: uppercase;
+            color: darkgray;
+            line-height: inherit; }
+            #app nav #nav_wrap ul li a:hover {
+              color: white;
+              text-decoration: none; }
+            #app nav #nav_wrap ul li a:visited {
+              color: darkgray; }
+      #app nav #nav_wrap #nav_footer {
+        padding: 0 0 2.0625em 2.0625em;
+        position: absolute;
+        left: 0;
+        bottom: 0; }
+        #app nav #nav_wrap #nav_footer #dd_footer_logo {
+          height: 23px;
+          width: 101px;
+          margin-bottom: 1em;
+          color: white; }
+        #app nav #nav_wrap #nav_footer a {
+          font-size: 0.8125em;
+          margin-bottom: 0.8125em;
+          line-height: 1.3;
+          text-transform: uppercase;
+          display: block; }
+          #app nav #nav_wrap #nav_footer a#address_link {
+            color: #666666;
+            display: inline-block; }
+            #app nav #nav_wrap #nav_footer a#address_link:hover {
+              color: white; }
+          #app nav #nav_wrap #nav_footer a#dd_tel {
+            margin-bottom: 0; }
+        #app nav #nav_wrap #nav_footer small {
+          color: white;
+          font-size: 0.6875em; }
+          #app nav #nav_wrap #nav_footer small a {
+            color: #666666;
+            text-transform: none; }
     #app nav #bar {
       position: relative;
       width: 100px;
       height: 100%;
       padding-top: 2.125em;
       background-color: #212121;
-      z-index: 9999;
+      z-index: 9997;
       cursor: pointer; }
       #app nav #bar #dds_logo {
         position: absolute;
-        top: 40%; }
+        top: 48%;
+        left: 10%;
+        z-index: 9999; }
+        #app nav #bar #dds_logo #ship-water {
+          -webkit-transition: .3s ease-in-out;
+                  transition: .3s ease-in-out; }
         #app nav #bar #dds_logo:hover #ship-water {
+          -webkit-transition: .3s ease-in-out;
+                  transition: .3s ease-in-out;
           fill: red; }
+      #app nav #bar #inner_bar {
+        position: relative;
+        width: 100px;
+        height: 100%;
+        z-index: 9998;
+        cursor: pointer; }
+        #app nav #bar #inner_bar #dds_nav {
+          width: 40px;
+          height: 30px;
+          position: relative;
+          margin: 0px auto;
+          -webkit-transform: rotate(0deg);
+              -ms-transform: rotate(0deg);
+                  transform: rotate(0deg);
+          -webkit-transition: .5s ease-in-out;
+                  transition: .5s ease-in-out;
+          cursor: pointer; }
+          #app nav #bar #inner_bar #dds_nav span {
+            display: block;
+            position: absolute;
+            height: 6px;
+            width: 100%;
+            background: #3A3A3A;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+            -webkit-transition: .15s ease-in-out;
+                    transition: .15s ease-in-out; }
+            #app nav #bar #inner_bar #dds_nav span:nth-child(1) {
+              top: 0px;
+              -webkit-transform-origin: left center;
+                  -ms-transform-origin: left center;
+                      transform-origin: left center; }
+            #app nav #bar #inner_bar #dds_nav span:nth-child(2) {
+              top: 12px;
+              -webkit-transform-origin: left center;
+                  -ms-transform-origin: left center;
+                      transform-origin: left center; }
+            #app nav #bar #inner_bar #dds_nav span:nth-child(3) {
+              top: 24px;
+              -webkit-transform-origin: left center;
+                  -ms-transform-origin: left center;
+                      transform-origin: left center; }
+          #app nav #bar #inner_bar #dds_nav:hover span {
+            background: #C4C4C4; }
+          #app nav #bar #inner_bar #dds_nav.open span:nth-child(1) {
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            top: -2px;
+            left: 0.333em; }
+          #app nav #bar #inner_bar #dds_nav.open span:nth-child(2) {
+            width: 0%;
+            opacity: 0; }
+          #app nav #bar #inner_bar #dds_nav.open span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+            top: 26px;
+            left: 0.333em;
+            height: 0.375em; }
   #app._nav_open {
     -webkit-transform: translateX(300px);
         -ms-transform: translateX(300px);
             transform: translateX(300px); }
     #app._nav_open nav #nav_wrap {
       opacity: 1; }
-
-/* Push classes applied to the body */
-.blog {
-  overflow-x: hidden;
-  position: relative;
-  left: 0; }
-
-/* Transitions */
-#nav_wrap,
-.blog {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }

@@ -2,16 +2,6 @@
  * Reset some basic elements
  */
 
-html, body {
-    width: 100%;
-    height: 100%;
-    background-color: #060606;
-    overflow: hidden;
-    color: #666666;
-    font-family: "Noto Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    font-weight: normal;
-}
 
 body {
     background: white;
@@ -27,6 +17,14 @@ body {
 }
 
 html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #060606;
+    overflow: hidden;
+    color: #666666;
+    font-family: "Noto Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
     font-size: 100%;
 }
 
@@ -40,15 +38,7 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
-body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-}
+
 
 
 /**
@@ -115,16 +105,16 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: darkgray;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color:darkgray;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: white;
+        text-decoration: none;
     }
 }
 
@@ -227,4 +217,13 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+/**
+ * Other
+ */
+
+small {
+    font-size: 60%;
+    line-height: inherit;
 }
