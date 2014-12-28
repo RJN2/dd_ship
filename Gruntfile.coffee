@@ -3,6 +3,8 @@
 "use strict"
 
 module.exports = (grunt) ->
+  grunt.loadNpmTasks "grunt-contrib-sass"
+  grunt.loadNpmTasks "grunt-autoprefixer"
   grunt.loadNpmTasks "grunt-bower-task"
   grunt.loadNpmTasks "grunt-contrib-connect"
   grunt.loadNpmTasks "grunt-contrib-copy"
@@ -10,6 +12,33 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-exec"
 
   grunt.initConfig
+   
+    # Sass
+    sass:
+      options: [
+        sourceMap: true # Create source map
+        outputStyle: "compressed" # Minify output
+      ]
+      dist:
+        files: [
+          expand: true # Recursive
+          cwd: "assets" # The startup directory
+          src: ["css/**/*.scss"] # Source files
+          dest: "stylesheets" # Destination
+          ext: ".css" # File extension
+        ]
+
+    # Autoprefixer
+    autoprefixer:
+      options: [
+        browsers: ["last 2 versions"]
+        map: true # Update source map (creates one if it can't find an existing map)
+      ]
+      
+      # Prefix all files
+      multiple_files:
+        src: "stylesheets/**/*.css"
+
 
     copy:
       jquery:
@@ -46,7 +75,7 @@ module.exports = (grunt) ->
           "_includes/**/*"
           "_layouts/**/*"
           "_posts/**/*"
-          "assets/css/**/*"
+          "stylesheets/css/**/*"
           "assets/js/**/*"
           "_config.yml"
           "*.html"
@@ -55,6 +84,16 @@ module.exports = (grunt) ->
         tasks: [
           "exec:jekyll"
         ]
+      css:
+        files: [
+          "assets/css/**/*.scss"
+        ]
+        tasks: [
+          "sass"
+          "autoprefixer"
+        ]
+        options:
+          spawn: false
 
     connect:
       server:
@@ -76,4 +115,9 @@ module.exports = (grunt) ->
 
   grunt.registerTask "default", [
     "serve"
+  ]
+  
+  grunt.registerTask "prod", [
+    "sass"
+    "autoprefixer"
   ]
