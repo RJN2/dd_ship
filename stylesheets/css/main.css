@@ -505,9 +505,9 @@ small {
         #app nav #nav_wrap ul li {
           line-height: 1.4; }
           #app nav #nav_wrap ul li a {
-            font-family: "futura-pt", sans-serif;
-            font-weight: 300;
-            font-size: 1.25em;
+            font-family: sans-serif;
+            font-weight: 100;
+            font-size: 1.1em;
             text-transform: uppercase;
             color: darkgray;
             line-height: inherit; }
@@ -555,7 +555,7 @@ small {
       cursor: pointer; }
       #app nav #bar #dds_logo {
         position: absolute;
-        top: 48%;
+        top: 46%;
         left: 10%;
         z-index: 9999; }
         #app nav #bar #dds_logo #ship-water {
@@ -634,3 +634,35 @@ small {
             transform: translateX(300px); }
     #app._nav_open nav #nav_wrap {
       opacity: 1; }
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  direction: ltr; }
+
+#main {
+  position: relative;
+  width: 120%;
+  height: 100%;
+  padding-left: 99px;
+  overflow: hidden;
+  z-index: 6;
+  background: url(/assets/images/Ivan-Aivazovsky.jpg) no-repeat center center fixed;
+  background-size: cover; }
+  #main #content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-origin: center center 50%;
+        -ms-transform-origin: center center 50%;
+            transform-origin: center center 50%; }
+    #main #content #home_view {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      color: white; }
