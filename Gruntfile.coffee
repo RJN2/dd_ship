@@ -68,6 +68,13 @@ module.exports = (grunt) ->
           src: "bootstrap.min.js"
           dest: "vendor/js/"
         }]
+      d3:
+        files: [{
+          expand: true
+          cwd: "bower_components/d3/"
+          src: "d3.js"
+          dest: "vendor/js/"
+          }]
 
     exec:
       jekyll:
