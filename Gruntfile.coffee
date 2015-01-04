@@ -72,7 +72,7 @@ module.exports = (grunt) ->
         files: [{
           expand: true
           cwd: "bower_components/d3/"
-          src: "d3.js"
+          src: "d3.min.js"
           dest: "vendor/js/"
           }]
 
