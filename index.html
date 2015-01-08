@@ -5,14 +5,25 @@ layout: default
 <div id="content" class="blog">
   <h1 class="page-heading">The Ship</h1>
 
-  <ul class="post-list">
+  <ul id="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+      <li class="blog-post">
+        <div class="text mini-post">
+          <h1>
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              <span>{{ post.title }}</span>
+            </a>
+          </h1>
+        </div>
+        <p class="teaser">{{ post.teaser }}</p>
+        <div class="meta-info">
+          <div class="author-date-wrap">
+            <div class="author">
+              <a href="localhost:4000/blog">{{ post.author }}</a>
+            </div>
+          </div>
+          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
       </li>
     {% endfor %}
   </ul>
