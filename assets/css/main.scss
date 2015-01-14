@@ -177,6 +177,16 @@ ul, ol {
 	}
 }
 
+article.post {
+	font-family:'Noto Sans', sans-serif;;
+	p {
+		margin: 0 0 1.404em;
+	}
+	h2 {
+		font-size: 1.62em;
+		margin: 3rem 0 1rem 0;
+	}
+}
 
 @keyframes slide {
   100% { transform: translateX(7px); }

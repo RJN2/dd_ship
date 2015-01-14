@@ -9,7 +9,7 @@ body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 1;
+  line-height: 1.56em;
   position: relative;
   cursor: default; }
 
@@ -740,6 +740,14 @@ ul, ol {
           color: rgba(142, 146, 166, 0.96);
           font-family: "calluna-sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
           font-size: 1.1rem; }
+
+article.post {
+  font-family: 'Noto Sans', sans-serif; }
+  article.post p {
+    margin: 0 0 1.404em; }
+  article.post h2 {
+    font-size: 1.62em;
+    margin: 3rem 0 1rem 0; }
 
 @-webkit-keyframes slide {
   100% {
