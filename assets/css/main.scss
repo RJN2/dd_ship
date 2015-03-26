@@ -48,7 +48,7 @@ $on-laptop:        800px;
 ;
 
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
-	margin: 0;
+	margin:0;
 	padding: 0;
 	direction: ltr;
 }
@@ -69,6 +69,7 @@ ul, ol {
 	padding-left: 99px;
 	z-index: 6;
 	background-color:white;
+	overflow:scroll;
   h1.page-heading {
   	color:#000;
   	font-family:"PT Sans", sans-serif;
@@ -130,7 +131,7 @@ ul, ol {
 				}
 				p {
 					color: rgba(142, 146, 166, 0.96);
-					font-size: 1em;
+					font-size: 1remm;
 					line-height: 1.75;
 					margin: .75rem 0;
 				}

@@ -21,6 +21,11 @@
     <script src="/vendor/js/classie.js"></script>
     <script src="/vendor/js/d3.min.js"></script>
     <script src="/assets/js/nav.js"></script>
+    {% if page.javascript %}
+      {% for js_file in page.javascript %}
+        <script src='/assets/js/{{ js_file }}.js'></script>
+      {% endfor %}
+    {% endif %}
 
   </body>
 

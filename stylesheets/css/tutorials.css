@@ -1,0 +1,10 @@
+div.bar {
+  display: inline-block;
+  width: 20px;
+  background-color: teal;
+  margin-right: 2px; }
+
+#further .pumpkin {
+  fill: yellow;
+  stroke: orange;
+  stroke-width: 5; }
